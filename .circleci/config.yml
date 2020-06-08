@@ -58,10 +58,10 @@ jobs:
             - ~/usr/local/lib/node_modules
           key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm test --test/test.js
-      - store_test_results:
-          path: test 
-      # - store_artifacts:
+      # - store_test_results:
       #     path: test 
+      - store_artifacts:
+          path: test 
 
   env_exp: 
     executor:
