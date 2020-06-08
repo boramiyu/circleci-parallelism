@@ -38,9 +38,9 @@ jobs:
     parallelism: 4
     steps:
       - checkout
-      run: 
-        name: "split tests"
-        command: circleci tests glob "test/*.js" | circleci tests split --split-by=timings
+      - run: 
+          name: "split tests"
+          command: circleci tests glob "test/*.js" | circleci tests split --split-by=timings
       - attach_workspace:
           at: /tmp/workspace
       - run: |
