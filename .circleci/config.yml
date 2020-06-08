@@ -40,7 +40,9 @@ jobs:
       - checkout
       - run: 
           name: "split tests"
-          command: circleci tests glob "test/*.js" | circleci tests split --split-by=timings
+          command: | 
+            echo $(circleci tests glob "test/*.js")
+            circleci tests glob "test/*.js" | circleci tests split --split-by=timings
       - attach_workspace:
           at: /tmp/workspace
       - run: |
