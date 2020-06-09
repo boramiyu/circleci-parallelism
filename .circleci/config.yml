@@ -60,7 +60,8 @@ jobs:
           command: echo $(circleci tests glob "test/*.js")
             # circleci tests glob "test/*.js" | circleci tests split --split-by=timings
       - run:
-          command: npm test --test/test.js --reporter mocha-junit-reporter
+          command: mocha test --reporter mocha-junit-reporter
+            # npm test --test/test.js --reporter mocha-junit-reporter
           environment:
             MOCHA_FILE: ~/junit/test-results.xml
           when: always
