@@ -35,10 +35,6 @@ jobs:
     parallelism: 4
     steps:
       - checkout
-      - run: 
-          name: "echo glob"
-          command: echo $(circleci tests glob "test/*.js")
-            # circleci tests glob "test/*.js" | circleci tests split --split-by=timings
       - attach_workspace:
           at: /tmp/workspace
       - run: |
@@ -52,16 +48,25 @@ jobs:
             - node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
             - node-v1-{{ .Branch }}-
             - node-v1-
-      - run: npm install
       - save_cache:
-          paths:
-            - ~/usr/local/lib/node_modules
-          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run: npm test --test/test.js
+                paths:
+                  - ~/usr/local/lib/node_modules
+                key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run: npm install
+      - run: mkdir ~/junit
+      - run:
+          name: "echo glob"
+          command: echo $(circleci tests glob "test/*.js")
+            # circleci tests glob "test/*.js" | circleci tests split --split-by=timings
+      - run:
+          command: npm test --reporter mocha-junit-reporter
+          environment:
+            MOCHA_FILE: ~/junit/test-results.xml
+          when: always
       - store_test_results:
-          path: test 
+          path: ~/junit
       - store_artifacts:
-          path: test 
+          path: ~/junit
 
   env_exp: 
     executor:
