@@ -52,7 +52,8 @@ jobs:
                 paths:
                   - ~/usr/local/lib/node_modules
                 key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
-      - run: npm install
+      - run: npm install 
+      - run: npm install mocha-junit-reporter --save-dev
       - run: mkdir ~/junit
       - run:
           name: "echo glob"
