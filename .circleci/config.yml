@@ -49,18 +49,18 @@ jobs:
             - node-v1-{{ .Branch }}-
             - node-v1-
       - save_cache:
-                paths:
-                  - ~/usr/local/lib/node_modules
-                key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+          paths:
+            - ~/usr/local/lib/node_modules
+          key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
       - run: npm install 
       - run: npm install mocha-junit-reporter --save-dev
       - run: mkdir ~/junit
       - run:
           name: "echo glob"
           command: echo $(circleci tests glob "test/*.js")
-            # circleci tests glob "test/*.js" | circleci tests split --split-by=timings
+            circleci tests glob "test/*.js" | circleci tests split
       - run:
-          command: mocha test --reporter mocha-junit-reporter
+          command: npm test --reporter mocha-junit-reporter
             # npm test --test/test.js --reporter mocha-junit-reporter
           environment:
             MOCHA_FILE: ~/junit/test-results.xml
