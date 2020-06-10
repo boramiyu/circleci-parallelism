@@ -57,11 +57,9 @@ jobs:
       - run: mkdir ~/junit
       - run:
           name: "echo glob"
-          command: echo $(circleci tests glob "test/*.js")
-            circleci tests glob "test/*.js" | circleci tests split
+          command: circleci tests glob "test/*.js" | circleci tests split
       - run:
-          command: npm test --reporter mocha-junit-reporter
-            # npm test --test/test.js --reporter mocha-junit-reporter
+          command: npm test 
           environment:
             MOCHA_FILE: ~/junit/test-results.xml
           when: always
