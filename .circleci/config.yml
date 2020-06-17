@@ -52,6 +52,9 @@ jobs:
             paths:
               - ~/usr/local/lib/node_modules
             key: node-v1-{{ .Branch }}-{{ checksum "package-lock.json" }}
+      - run:
+          name: "split tests"
+          command: circleci tests glob "test/*.js" | circleci tests split --split-by=timings
       - run: npm install 
       - run: mkdir junit
       - run:
@@ -59,9 +62,6 @@ jobs:
           environment:
             MOCHA_FILE: junit/test-results.xml
           when: always
-      # - run:
-      #     name: "echo glob"
-      #     command: circleci tests glob "test/*.js" | circleci tests split
       - store_test_results:
           path: junit
       - store_artifacts:
