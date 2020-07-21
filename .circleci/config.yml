@@ -55,7 +55,7 @@ jobs:
       - run:
           name: "split tests"
           command: echo "splitting tests but not really 😩🤦🏼‍♀️"
-          # command: circleci tests split --split-by=timings --show-counts test/test.js | xargs -n 1 echo
+          command: circleci tests split --split-by=timings --show-counts test/test.js | xargs -n 1 echo
       - run: npm install 
       - run: mkdir junit
       - run:

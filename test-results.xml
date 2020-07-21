@@ -1,52 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="Mocha Tests" time="0.0000" tests="8" failures="0">
-  <testsuite name="Root Suite" timestamp="2020-06-17T19:28:32" tests="0" time="0.0000" failures="0">
+<testsuites name="Mocha Tests" time="0.0020" tests="8" failures="1">
+  <testsuite name="Root Suite" timestamp="2020-07-09T21:33:19" tests="0" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="ArrayOne" timestamp="2020-06-17T19:28:32" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="ArrayOne" timestamp="2020-07-09T21:33:19" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="#indexOf()" timestamp="2020-06-17T19:28:32" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="#indexOf()" timestamp="2020-07-09T21:33:19" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
     <testcase name="ArrayOne #indexOf() should return -1 when the value is not present" time="0.0000" classname="should return -1 when the value is not present">
     </testcase>
   </testsuite>
-  <testsuite name="ArrayTwo" timestamp="2020-06-17T19:28:32" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="ArrayTwo" timestamp="2020-07-09T21:33:19" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="#indexOf()" timestamp="2020-06-17T19:28:32" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="#indexOf()" timestamp="2020-07-09T21:33:19" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
     <testcase name="ArrayTwo #indexOf() should return -1 when the value is not present" time="0.0000" classname="should return -1 when the value is not present">
     </testcase>
   </testsuite>
-  <testsuite name="ArrayThree" timestamp="2020-06-17T19:28:32" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="ArrayThree" timestamp="2020-07-09T21:33:19" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="#indexOf()" timestamp="2020-06-17T19:28:32" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="#indexOf()" timestamp="2020-07-09T21:33:19" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
     <testcase name="ArrayThree #indexOf() should return -1 when the value is not present" time="0.0000" classname="should return -1 when the value is not present">
     </testcase>
   </testsuite>
-  <testsuite name="ArrayFour" timestamp="2020-06-17T19:28:32" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="ArrayFour" timestamp="2020-07-09T21:33:19" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="#indexOf()" timestamp="2020-06-17T19:28:32" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="#indexOf()" timestamp="2020-07-09T21:33:19" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
     <testcase name="ArrayFour #indexOf() should return -1 when the value is not present" time="0.0000" classname="should return -1 when the value is not present">
     </testcase>
   </testsuite>
-  <testsuite name="ArrayFive" timestamp="2020-06-17T19:28:32" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="ArrayFive" timestamp="2020-07-09T21:33:19" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="#indexOf()" timestamp="2020-06-17T19:28:32" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
-    <testcase name="ArrayFive #indexOf() should return -1 when the value is not present" time="0.0000" classname="should return -1 when the value is not present">
+  <testsuite name="#indexOf()" timestamp="2020-07-09T21:33:19" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0020" failures="1">
+    <testcase name="ArrayFive #indexOf() should return -1 when the value is not present" time="0.0020" classname="should return -1 when the value is not present">
+      <failure message="-1 == 0" type="AssertionError"><![CDATA[AssertionError [ERR_ASSERTION]: -1 == 0
+    at Context.<anonymous> (test/test.js:38:20)
+    at processImmediate (internal/timers.js:456:21)]]></failure>
     </testcase>
   </testsuite>
-  <testsuite name="ArraySix" timestamp="2020-06-17T19:28:32" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="ArraySix" timestamp="2020-07-09T21:33:19" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="#indexOf()" timestamp="2020-06-17T19:28:32" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="#indexOf()" timestamp="2020-07-09T21:33:19" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
     <testcase name="ArraySix #indexOf() should return -1 when the value is not present" time="0.0000" classname="should return -1 when the value is not present">
     </testcase>
   </testsuite>
-  <testsuite name="ArraySeven" timestamp="2020-06-17T19:28:32" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="ArraySeven" timestamp="2020-07-09T21:33:19" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="#indexOf()" timestamp="2020-06-17T19:28:32" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="#indexOf()" timestamp="2020-07-09T21:33:19" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
     <testcase name="ArraySeven #indexOf() should return -1 when the value is not present" time="0.0000" classname="should return -1 when the value is not present">
     </testcase>
   </testsuite>
-  <testsuite name="ArrayEight" timestamp="2020-06-17T19:28:32" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="ArrayEight" timestamp="2020-07-09T21:33:19" tests="0" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
   </testsuite>
-  <testsuite name="#indexOf()" timestamp="2020-06-17T19:28:32" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
+  <testsuite name="#indexOf()" timestamp="2020-07-09T21:33:19" tests="1" file="/Users/rebekahwhittle/Code/circleci-parallelism/test/test.js" time="0.0000" failures="0">
     <testcase name="ArrayEight #indexOf() should return -1 when the value is not present" time="0.0000" classname="should return -1 when the value is not present">
     </testcase>
   </testsuite>
