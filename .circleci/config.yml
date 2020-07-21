@@ -121,14 +121,14 @@ workflows:
           type: approval
           filters:
             branches:
-              only: master
+              only: main
           requires:
             - test
             - env_exp
       - deploy:
           filters:
             branches:
-              only: master
+              only: main
           requires:
             - approval
 
